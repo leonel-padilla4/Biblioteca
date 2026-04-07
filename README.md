@@ -9,16 +9,25 @@ de datos vamos a trabajar.
 **Tabla `genero`** — Guarda los géneros literarios. Tiene un `id` autoincrementable 
 como clave primaria y un campo `nombre` para el nombre del género.
 ```
-
+```
 **Tabla `autor`** — Almacena los autores. 
 Tiene `id`, `nombre`, `cumpleaños` (tipo DATETIME) y `nacionalidad`.
-
-**Tabla `libro`** — Guarda los libros. Tiene `id`, `titulo`, `isbn`, y dos claves foráneas: `autor_id` que apunta a la tabla `autor`, y `genero_id` que apunta a `genero`. Esto establece la relación entre las tablas.
-
-**Tabla `patron`** — Representa a los usuarios de la biblioteca. Tiene `id`, `nombre`, `email` y `telefono`.
-
-**Tabla `reservas`** — Es la tabla central de operaciones. Relaciona libros con patrones a través de `libro_id` y `patron_id` como claves foráneas, y también guarda la `fecha` de la reserva y el `email` del usuario.
-
+```
+```
+**Tabla `libro`** — Guarda los libros. Tiene `id`, `titulo`, `isbn`,
+y dos claves foráneas: `autor_id` que apunta a la tabla `autor`, y
+`genero_id` que apunta a `genero`. Esto establece la relación entre las tablas.
+```
+```
+**Tabla `patron`** — Representa a los usuarios de la biblioteca.
+Tiene `id`, `nombre`, `email` y `telefono`.
+```
+```
+**Tabla `reservas`** — Es la tabla central de operaciones.
+Relaciona libros con patrones a través de `libro_id` y
+`patron_id` como claves foráneas, y también
+guarda la `fecha` de la reserva y el `email` del usuario.
+```
 ---
 
 ## Inserción de Datos
