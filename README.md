@@ -1,11 +1,9 @@
 ﻿
 ## Creación de la Base de Datos y Tablas
-´´´
 Lo primero es crear la base de datos con `CREATE DATABASE biblioteca` y 
 luego seleccionarla con `USE biblioteca`. Esto le dice a MySQL en qué base
 de datos vamos a trabajar.
-´´´
-´´´
+
 **Tabla `genero`** — Guarda los géneros literarios. Tiene un `id` autoincrementable como clave primaria y un campo `nombre` para el nombre del género.
 
 **Tabla `autor`** — Almacena los autores. Tiene `id`, `nombre`, `cumpleaños` (tipo DATETIME) y `nacionalidad`.
