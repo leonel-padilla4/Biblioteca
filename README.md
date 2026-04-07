@@ -26,6 +26,11 @@ Se insertan 4 géneros: Ficción, Terror, Historia y Ciencia. Luego 4 autores co
 
 **Consulta 1 — Todos los libros con su autor y género.** Se usa `JOIN` doble para unir `libro` con `autor` y con `genero`, mostrando el título, el nombre del autor y el nombre del género en una sola fila.
 
+SELECT libro.titulo, autor.nombre AS autor, genero.nombre AS genero
+FROM libro
+JOIN autor ON libro.autor_id = autor.id
+JOIN genero ON libro.genero_id = genero.id;
+
 **Consulta 2 — Libros que nunca han sido reservados.** Se usa `LEFT JOIN` entre `libro` y `reservas`, y luego se filtra con `WHERE reservas.id IS NULL`. El LEFT JOIN conserva todos los libros aunque no tengan reservas, y el filtro selecciona solo los que no tienen ninguna.
 
 **Consulta 3 — Usuarios que han hecho al menos una reserva.** Se hace un `JOIN` entre `patron` y `reservas`. El `DISTINCT` evita que aparezca el mismo usuario varias veces si tiene más de una reserva.
